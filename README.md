@@ -5,6 +5,8 @@ Document: README.md
 Description: This document provides the list of artifacts created for 
 assignment course Getting and Cleaning Data.
 
+Important Note: In orde for this code to be run successfully, the data must be downloaded in a directory called UCI HAR Dataset
+
 README.md         				Referes to this document
 CodeBook.md 					You can find this document in the Github repository. 
 								This explains the steps taken to convert the data 
