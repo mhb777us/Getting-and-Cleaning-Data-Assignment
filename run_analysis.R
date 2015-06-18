@@ -92,15 +92,15 @@ mystd <-  all_activity[, grep("std", fvector, value = TRUE) ]
 my_mean_std <- cbind(mykeys, mymean, mystd)
 
 # Create a group function using by_package. It can be used in summerize_each function
-by_activity_subject <- group_by(my_mean_std, activity_name, subject_id) 
+by_subject_activity <- group_by(my_mean_std, subject_id, activity_name) 
 
-# Create the actual dataset for the group defined in by_activity_subject
-mean_by_activity_subject <-summarise_each(by_activity_subject,funs(mean))
+# Create the actual dataset for the group defined in by_subject_activity
+mean_by_subject_activity <-summarise_each(by_subject_activity,funs(mean))
 
 # Write the output file with mean and sd measurements group by activity name and subject id.
-# The file name is mean_by_activity_subject.txt
-file2 <- paste0 (unzdir, "/mean_by_activity_subject.txt")
-write.table(mean_by_activity_subject , file2, row.name=FALSE )
+# The file name is mean_by_subject_activity.txt
+file2 <- paste0 (unzdir, "/mean_by_subject_activity.txt")
+write.table(mean_by_subject_activity , file2, row.name=FALSE )
 
-print("The file mean_by_activity_subject.txt is created in the directory below")
+print("The file mean_by_subject_activity.txt is created in the directory below")
 print(unzdir)
