@@ -91,11 +91,6 @@ mystd <-  all_activity[, grep("std", fvector, value = TRUE) ]
 # It will have activity id, subject id and the mean and std only measurements
 my_mean_std <- cbind(mykeys, mymean, mystd)
 
-file1 <- paste0 (unzdir, "/detail_mean_std_only.txt")
-
-# Write the output file with mean and sd measurements only. The file name is detail_mean_std_only.txt
-write.table(my_mean_std , file1, row.name=FALSE )
-
 # Create a group function using by_package. It can be used in summerize_each function
 by_activity_subject <- group_by(my_mean_std, activity_name, subject_id) 
 

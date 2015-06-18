@@ -1,8 +1,12 @@
 
 Author: mhb777us
 Date: 12/15/2015
-Document: Code book about assignment for course Getting and Cleaning Data.
+Document: Code book about assignment for course Getting and Cleaning Data. 
 
+Data Flow diagram: Read Left to right until the end, and down
+Download from Web -> Load into dataframes -> Clean the Labels -> Apply Cleansed Labels ->
+-> Join tables with keys -> Create a subset for Mean & STD measurements -> Create a second
+data set with group by activity name and subject id -> Create mean_by_activity_subject.txt
 
 # Download, unizip, and load all data from the sources into data tables.
 
@@ -53,16 +57,13 @@ all_activity 	      label_train_activity      Merge test and train data into one
 					   							for test and train data together
 
 
-## Create subset only for mean and standard deviation measurements. Ignore other columns
-## Write the file from this data set that satisfy the first requirement
+## Create subset only for mean and standard deviation measurements. I
 
 R object		  	Source					Description
 mymean	  			all_activity			Subset columns who's labels are mean 
 mystd	  			all_activity			Subset columns who's labels are standard dev 
 my_mean_std 		mymean					Combine mean and std measure columns
 					mystd
-detail_mean_std_	my_mean_std				Write output for Step 4
-only.txt
 
 ## Using the previous data set, create a new summary data set for mean grouped by 
 ## activity names and subject id. 
