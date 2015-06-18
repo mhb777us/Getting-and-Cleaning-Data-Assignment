@@ -3,7 +3,8 @@ Author: mhb777us
 Date: 12/15/2015
 Document: Code book about assignment for course Getting and Cleaning Data.
 
-# Load all data from the sources.
+
+# Download, unizip, and load all data from the sources into data tables.
 
 R object			Source					Description
 activity_labels		activity_labels.txt		Load Activity data 
@@ -23,10 +24,10 @@ activity_labels		activity_labels			Renamed: V1 = activity_id, V2 = activity_name
 y_train				y_train					Renamed: V1 = activity_id 
 y_test				y_test					Renamed: V1 = activity_id 
 fvector				features				Captures all descriptive column labels. These 
-											labels would be applied to X_train, X_tests
-X_test				fvector					These labels captured from prior step are  
-											applied to X_tests
-X_train				fvector					These labels captured from prior step are  
+											labels would be applied to X_train, X_test
+X_test				fvector					The labels captured from prior step are  
+											applied to X_test
+X_train				fvector					The labels captured from prior step are  
 											applied to X_train
 subject_train		N/A						Renamed column: V1 = subject_id 
 subject_test		N/A						Renamed column: V1 = subject_id 
@@ -60,8 +61,8 @@ mymean	  			all_activity			Subset columns who's labels are mean
 mystd	  			all_activity			Subset columns who's labels are standard dev 
 my_mean_std 		mymean					Combine mean and std measure columns
 					mystd
-mean_std_only.txt	my_mean_std				Write output for Step 4
-
+detail_mean_std_	my_mean_std				Write output for Step 4
+only.txt
 
 ## Using the previous data set, create a new summary data set for mean grouped by 
 ## activity names and subject id. 
