@@ -101,3 +101,6 @@ mean_by_activity_subject <-summarise_each(by_activity_subject,funs(mean))
 # The file name is mean_by_activity_subject.txt
 file2 <- paste0 (unzdir, "/mean_by_activity_subject.txt")
 write.table(mean_by_activity_subject , file2, row.name=FALSE )
+
+print("The file mean_by_activity_subject.txt is created in the directory below")
+print(unzdir)
