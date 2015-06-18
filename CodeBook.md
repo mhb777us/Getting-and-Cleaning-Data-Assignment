@@ -71,7 +71,7 @@ my_mean_std 		mymean					Combine mean and std measure columns
 
 R object		  		      Source				    Description
 by_activity_subject			  my_mean_std  			    group by activity name and subject
-mean_by_activity_subject	  by_activity_subject	    create a mean data by above group
-mean_by_activity_subject.txt  mean_by_activity_subject  Write output for Step 5
+mean_by_subject_activity	  by_subject_activity	    create a mean data by above group
+mean_by_subject_activity.txt  mean_by_subject_activity  Write output for Step 5
 
 
